@@ -32,6 +32,7 @@ let mother = {
         if (linkprams.mother != undefined) {
             console.log('Splash mother screen');
             document.getElementById("mothers_name").innerHTML = "Happy mothers day, "+linkprams.mother;
+            document.title = "Happy mothers day, "+linkprams.mother;
             document.getElementById("mothers_message").innerHTML = this.linkify(linkprams.msg);
             mother.set_background(linkprams.bg);
             this.go_to_motherscreen();
