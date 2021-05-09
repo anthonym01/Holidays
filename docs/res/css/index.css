@@ -113,6 +113,7 @@ body {
     border-color: var(--text-color);
     color: var(--text-color);
     border-radius: 1rem;
+    transform: translateY(0)!important;
 }
 
 /* Settup screen */
@@ -211,6 +212,7 @@ body {
     border-color: var(--text-color);
     color: var(--text-color);
     border-radius: 1rem;
+    transform: translateY(0)!important;
 }
 
 
