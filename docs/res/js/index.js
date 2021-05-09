@@ -23,8 +23,8 @@ let mother = {
         console.log("⠄⠄⠄⠄⠄⠄⠄⠄⠛⠛⠋⠁⣠⣾⣿⣿⣿⣿⡆⠄⣿⠆⠄⠄⠄⠄⠄⠄⠄")
 
         setTimeout(() => {
-            document.getElementById('create_your_own').style.transform = "translateY(-21rem)";
-            document.getElementById('mother_data_submit').style.transform = "translateY(-21rem)";
+            document.getElementById('create_your_own').classList = "create_your_own_active";
+            document.getElementById('mother_data_submit').classList = "mother_data_submit_active"
         }, 5000);
 
         let linkprams = mother.get_url_variables();
