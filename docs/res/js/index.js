@@ -68,7 +68,7 @@ let mother = {
         let motherb = document.getElementById('mother_put').value;
         let msg = document.getElementById('message_put').value;
         if (motherb != "") {
-            let new_link = `${window.location.href}?mother=${motherb}&bg=${this.selected_background}&msg=${msg}`;
+            let new_link = `${window.location.href.slice(0,38)}?mother=${motherb}&bg=${this.selected_background}&msg=${msg}`;
             console.log(new_link)
             this.clipboard(new_link);
             console.warn('Created link: ', new_link)
