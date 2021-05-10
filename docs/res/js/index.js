@@ -68,12 +68,12 @@ let mother = {
         let motherb = document.getElementById('mother_put').value;
         let msg = document.getElementById('message_put').value;
         if (motherb != "") {
-            let new_link = `${window.location.href.slice(0,38)}?mother=${motherb}&bg=${this.selected_background}&msg=${msg.replace(/ /g, '%20')}`;
+            let new_link = `${window.location.href.split("?")[0]}?mother=${motherb}&bg=${this.selected_background}&msg=${msg.replace(/ /g, '%20')}`;
             console.log(new_link)
             this.clipboard(new_link);
             console.warn('Created link: ', new_link)
             notify.new('Coppied to clipboard', 'Your link was coppied to the clipboard, you may send it to someone by pasting it in a message')
-            return new_link;
+            //return new_link;
         } else {
             notify.new('No name', 'Your mother must have a name')
         }

@@ -101,9 +101,10 @@ body {
     color: var(--background-color);
 }
 
-.create_your_own {
+.create_your_own,
+.create_your_own_active {
     position: fixed;
-    bottom: 2vw;
+    bottom: -21vw;
     right: 0;
     width: 100%;
     box-sizing: border-box;
@@ -113,6 +114,12 @@ body {
     border-color: var(--text-color);
     color: var(--text-color);
     border-radius: 1rem;
+    transition: transform 2s;
+    transform: translateY(0);
+}
+
+.create_your_own_active {
+    transform: translateY(-22vw);
 }
 
 /* Settup screen */
@@ -201,7 +208,7 @@ body {
     border: none;
 }
 
-#mother_data_submit {
+.mother_data_submit,.mother_data_submit_active {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -211,8 +218,9 @@ body {
     border-color: var(--text-color);
     color: var(--text-color);
     border-radius: 1rem;
+    transition: transform 2s;
+    transform: translateY(0);
 }
-
 
 
 @keyframes stretch {
@@ -374,7 +382,8 @@ body {
         text-shadow: 0em 0em 0.1rem var(--background-color), 0em 0em 0.2rem var(--background-color), 0em 0em 0.5rem var(--background-color);
     }
 
-    .create_your_own {
+    .create_your_own,
+    .create_your_own_active {
         position: fixed;
         bottom: -20rem;
         right: 1rem;
@@ -389,6 +398,13 @@ body {
         transition: transform 2s;
         /*transform: translateY(-21rem);*/
         cursor: pointer;
+        transform: none;
+        transition: transform 2s;
+        transform: translateY(0);
+    }
+
+    .create_your_own_active {
+        transform: translateY(-21rem);
     }
 
     #mother_put {
@@ -458,7 +474,7 @@ body {
         box-shadow: 0vw 0vw 3rem 1rem var(--text-color);
     }
 
-    #mother_data_submit {
+    .mother_data_submit,.mother_data_submit_active {
         position: fixed;
         bottom: -20rem;
         right: 1rem;
@@ -472,7 +488,14 @@ body {
         border-radius: 1rem;
         cursor: pointer;
         transition: transform 2s;
+        transform: none;
+        transition: transform 2s;
+        transform: translateY(0);
     }
+    .mother_data_submit_active {
+        transform: translateY(-22rem);
+    }
+    
 
 
 }

@@ -23,8 +23,8 @@ let mother = {
         console.log("⠄⠄⠄⠄⠄⠄⠄⠄⠛⠛⠋⠁⣠⣾⣿⣿⣿⣿⡆⠄⣿⠆⠄⠄⠄⠄⠄⠄⠄")
 
         setTimeout(() => {
-            document.getElementById('create_your_own').style.transform = "translateY(-21rem)";
-            document.getElementById('mother_data_submit').style.transform = "translateY(-21rem)";
+            document.getElementById('create_your_own').classList = "create_your_own_active";
+            document.getElementById('mother_data_submit').classList = "mother_data_submit_active"
         }, 5000);
 
         let linkprams = mother.get_url_variables();
@@ -32,6 +32,7 @@ let mother = {
         if (linkprams.mother != undefined) {
             console.log('Splash mother screen');
             document.getElementById("mothers_name").innerHTML = "Happy mothers day, "+linkprams.mother;
+            document.title = "Happy mothers day, "+linkprams.mother;
             document.getElementById("mothers_message").innerHTML = this.linkify(linkprams.msg);
             mother.set_background(linkprams.bg);
             this.go_to_motherscreen();
@@ -67,7 +68,7 @@ let mother = {
         let motherb = document.getElementById('mother_put').value;
         let msg = document.getElementById('message_put').value;
         if (motherb != "") {
-            let new_link = `${window.location.href}?mother=${motherb}&bg=${this.selected_background}&msg=${msg}`;
+            let new_link = `${window.location.href.slice(0,38)}?mother=${motherb}&bg=${this.selected_background}&msg=${msg.replace(/ /g, '%20')}`;
             console.log(new_link)
             this.clipboard(new_link);
             console.warn('Created link: ', new_link)

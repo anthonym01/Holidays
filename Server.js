@@ -1,4 +1,6 @@
 //run 'node server.js' to run
++
+console.log('Holiday CDN prototype');
 
 const http = require('http');
 const fs = require('fs');
