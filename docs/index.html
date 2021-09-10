@@ -11,11 +11,25 @@
     <meta name="author" content="Samuel A. Matheson">
     <meta charset="utf-8">
 
-    <link rel="icon" href="res/img/data-pixels-playground-icon-128.246e037c8b7ac5c1eddd20911287ac59.png"
+    <link rel="icon" href="img/data-pixels-playground-icon-128.246e037c8b7ac5c1eddd20911287ac59.png"
         type="image/webp" sizes="32x32">
     <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="res/css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 
+    <meta name="viewport"
+        content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+
+    <script type="module"
+        src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"></script>
+    <script nomodule
+        src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"></script>
+
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#31d53d">
     <title>Holidays</title>
 </head>
 
@@ -37,7 +51,8 @@
         <button class="create_your_own" id="create_your_own">Make your own card</button>
     </div>
 
-    <script type="text/javascript" src="res/js/index.js"></script>
+    <script src="capacitor.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
