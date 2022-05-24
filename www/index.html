@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--<meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://fonts.googleapis.com'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta name="description" content="Mothers day page">
+    <meta name="keywords" content="Mothers;Mothers day;Holiday;happy;">
+    <meta name="author" content="Samuel A. Matheson">
+    <meta charset="utf-8">
+
+    <link rel="icon" href="img/data-pixels-playground-icon-128.246e037c8b7ac5c1eddd20911287ac59.png"
+        type="image/webp" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <meta name="viewport"
+        content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+
+    <script type="module"
+        src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"></script>
+    <script nomodule
+        src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"></script>
+
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#31d53d">
+    <title>Holidays</title>
+</head>
+
+<body class="dark">
+    <div id="settup_screen" class="screen">
+        <label for="mother_put">Mommy's name</label>
+        <input type="text" id="mother_put" placeholder="cannot be empty">
+        <label for="mother_put">A message for her</label>
+        <textarea type="text" name="Holiday_Mother_message" id="message_put"
+            placeholder="a nice message to your mother"></textarea>
+        <label for="background_chooser">Pick a background</label>
+        <div class="background_chooser" id="background_chooser"></div>
+        <button id="mother_data_submit" class="mother_data_submit">Generate your link</button>
+
+    </div>
+    <div id="mother_screen" class="screen" style="display: none;">
+        <div class="mother_heading" id="mothers_name">happy Mothers Day, Mothers name</div>
+        <div class="Mothers_message" id="mothers_message">Place held for message</div>
+        <button class="create_your_own" id="create_your_own">Make your own card</button>
+    </div>
+
+    <script src="capacitor.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
