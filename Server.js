@@ -5,7 +5,7 @@ const fs = require('fs');
 const port = 6889;//port for the server
 
 async function notfoundpage(response, url) {//404 page goes here
-    response.writeHead(404);
+    //response.writeHead(404);
     response.write('404 page not , code: ', url);
     console.error('File not found: ', url)
 }
@@ -22,7 +22,7 @@ const server = http.createServer(function (request, response) {///Create server
 
             try {
                 response.writeHead(200, { 'Content-type': 'text/html' });//200 ok
-                fs.readFile('./index.html', function (err, databuffer) {
+                fs.readFile('./www/index.html', function (err, databuffer) {
                     if (err) {
                         notfoundpage(response, 'index');
                     } else {
@@ -71,7 +71,7 @@ const server = http.createServer(function (request, response) {///Create server
                 //media handled automatically
             }
 
-            fs.readFile(request.url.replace('/', ''), function (err, data) {//read request.url.replace('/', '') file
+            fs.readFile(request.url.replace('/', 'www/'), function (err, data) {//read request.url.replace('/', '') file
                 if (err) {//error because file not found/inaccesible
                     notfoundpage(response, request.url);//show 404 page
                 } else {
