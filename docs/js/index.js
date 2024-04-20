@@ -8,7 +8,24 @@ App.addListener('backButton', () => {//back button on android
     console.warn('back button pressed')
 })
 
-window.addEventListener('load', function () { mother.start_cooking() })
+window.addEventListener('load',async function () { 
+    mother.start_cooking() 
+    try {
+        //call to server
+        const response = await fetch('http://yourkoza.us.to:8080/post/code_string', {
+            method: "POST",
+            body: JSON.stringify({ code_string:"test test" }),
+            headers: { "Content-type": "application/json; charset=UTF-8" }
+        });
+
+        if (!response.ok) { throw new Error('Network failiure'); }
+
+        const code_output = await response.json();
+        console.log(code_output);
+    } catch (error) {   
+        console.error('Error:', error);     
+    }
+})
 
 /*  Mother is all, mother is life */
 let mother = {
